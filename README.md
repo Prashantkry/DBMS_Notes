@@ -157,7 +157,7 @@ MANAGING DB (DDL)
 ```
 
 
-**Making a complete Database of an Organization **
+** Making a complete Database of an Organization **
 ```
 create database Organization;
 USE Organization;
