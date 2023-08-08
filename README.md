@@ -118,7 +118,7 @@ DROP database IF EXISTS Data_base_name;
 
 -- show data available in table 
 ```
-SELECT * FROM student;
+SELECT * FROM Data_base_name;
 ```
 
 Few Important command of DBMS SQL
