@@ -1,7 +1,9 @@
 # DMS_Notes
+> To run in DBMS -> mysql -u root -p
 Create Table 
-
-```create database College;```
+```
+create database College;
+```
 
 Select Database Name 
 ```
