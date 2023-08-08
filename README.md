@@ -111,6 +111,11 @@ CREATE table Student(
 INSERT INTO Student VALUES(1,'Prasahnt');
 ```
 
+Deleting data in table 
+```
+DROP database IF EXISTS Data_base_name;
+```
+
 -- show data available in table 
 ```
 SELECT * FROM student;
@@ -121,8 +126,9 @@ Few Important command of DBMS SQL
 1. DDL (data definition language): defining relation schema.
 	1. CREATE: create table, DB, view.
 	2. ALTER TABLE: modification in table structure. e.g, change column datatype or add/remove columns.
-	3. DROP: delete table, DB, view.
+	3. DROP: delete complete table, DB, view.
 	4. TRUNCATE: remove all the tuples from the table.
+		WE will not delete schema just all entries or user 
 	5. RENAME: rename DB name, table name, column name etc.
 2. DRL/DQL (data retrieval language / data query language): retrieve data from the tables.
 	1. SELECT
@@ -142,10 +148,11 @@ Few Important command of DBMS SQL
 MANAGING DB (DDL)
 ```
 1. Creation of DB
-1. CREATE DATABASE IF NOT EXISTS db-name;
-2. USE db-name; //need to execute to choose on which DB CREATE TABLE etc commands will be executed. //make switching between DBs possible.
-3. DROP DATABASE IF EXISTS db-name; //dropping database.
-4. SHOW DATABASES; //list all the DBs in the server.
-5. SHOW TABLES; //list tables in the selected DB.
+	1. CREATE DATABASE IF NOT EXISTS db-name;
+		IF NOT EXISTS -> agar ni h tasb hi banana h DataBase ko
+	2. USE db-name; //need to execute to choose on which DB CREATE TABLE etc commands will be executed. //make switching between DBs possible.
+	3. DROP DATABASE IF EXISTS db-name; //dropping database.
+	4. SHOW DATABASES; //list all the DBs in the server.
+	5. SHOW TABLES; //list tables in the selected DB.
 ```
 
