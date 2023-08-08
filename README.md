@@ -227,8 +227,6 @@ To know multiple particular field data
 Select First_Name ,Salary from worker;
 ```
 
-# ---------------------------------------------------------------------------------------------------------------------------------------
-
 <p align="center">
 DATA RETRIEVAL LANGUAGE (DRL)
 </p>
