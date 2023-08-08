@@ -290,6 +290,24 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 	1. Find distinct values in the table.
 	2. SELECT DISTINCT(col_name) FROM table_name;
 	3. GROUP BY can also be used for the same
+ 		1. “Select col_name from table GROUP BY col_name;” same output as above DISTINCT query
+		2. SQL is smart enough to realise that if you are using GROUP BY and not using any aggregation function, then
+you mean “DISTINCT”
+
+
+13. GROUP BY HAVING
+	1. Out of the categories made by GROUP BY, we would like to know only particular thing (cond).
+	2. Similar to WHERE.
+	3. Select COUNT(cust_id), country from customer GROUP BY country HAVING COUNT(cust_id) > 50;
+	4. WHERE vs HAVING
+	1. Both have same function of filtering the row base on certain conditions.
+	2. WHERE clause is used to filter the rows from the table based on specified condition
+	3. HAVING clause is used to filter the rows from the groups based on the specified condition.
+	4. HAVING is used after GROUP BY while WHERE is used before GROUP BY clause.
+	5. If you are using HAVING, GROUP BY is necessary.
+	6. WHERE can be used with SELECT, UPDATE & DELETE keywords while GROUP BY used with SELECT
+
+
 ```
 
 
