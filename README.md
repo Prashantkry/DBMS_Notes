@@ -32,10 +32,22 @@ SQL DATA TYPES (Ref: https://www.w3schools.com/sql/sql_datatypes.asp)
 DATATYPE Description
 ```
 CHAR 		string(0-255), string with size = (0, 255], e.g., CHAR(251)
+			It occupy complete space 255 byte even blank space will be occupied
+			 _______________________________________
+			|	|	|	|	|	|
+			|   R	|   A	|   M	|	|	|
+			|_______|_______|_______|_______|_______|
+
 VARCHAR 	string(0-255)
+			It occupy complete space 3 byte
+			 ________________________
+			|	|	|	|
+			|   R	|   A	|   M	|
+			|_______|_______|_______|
+
 TINYTEXT 	String(0-255)
 TEXT 		string(0-65535)
-BLOB 		string(0-65535)
+BLOB 		string(0-65535)	-> stroes audio video files in bytes (Binary Large Object)
 MEDIUMTEXT 	string(0-16777215)
 MEDIUMBLOB 	string(0-16777215)
 LONGTEXT 	string(0-4294967295)
@@ -59,11 +71,20 @@ BOOLEAN 	0/1
 BIT 		e.g., BIT(n), n upto 64, store values in bits.
 ```
 
+Signed / UnSigned
+```
+Ex- 
+	by default Its signed but when we unsigned it we can increase its size
+	TINYINT 	integer(-128 to 127)
+	UNSIGNED TINYINT 	integer(0 to 255)
 
-
-
-
-
+	create TABLE Table_Name(
+		For creating it
+		col INT,
+		col2 INT UNSIGNED,
+		col3 JSON	-- can also be used as data type
+	);
+```
 
 Create Table 
 ```
@@ -94,3 +115,38 @@ INSERT INTO Student VALUES(1,'Prasahnt');
 ```
 SELECT * FROM student;
 ```
+
+Few Important command of DBMS SQL
+```
+1. DDL (data definition language): defining relation schema.
+	1. CREATE: create table, DB, view.
+	2. ALTER TABLE: modification in table structure. e.g, change column datatype or add/remove columns.
+	3. DROP: delete table, DB, view.
+	4. TRUNCATE: remove all the tuples from the table.
+	5. RENAME: rename DB name, table name, column name etc.
+2. DRL/DQL (data retrieval language / data query language): retrieve data from the tables.
+	1. SELECT
+3. DML (data modification language): use to perform modifications in the DB
+	1. INSERT: insert data into a relation
+	2. UPDATE: update relation data.
+	3. DELETE: delete row(s) from the relation.
+4. DCL (Data Control language): grant or revoke authorities from user.
+	1. GRANT: access privileges to the DB
+	2. REVOKE: revoke user access privileges.
+5. TCL (Transaction control language): to manage transactions done in the DB
+	1. START TRANSACTION: begin a transaction
+	2. COMMIT: apply all the changes and end transaction
+	3. ROLLBACK: discard changes and end transaction
+	4. SAVEPOINT: checkout within the group of transactions in which to rollback.
+ ```
+MANAGING DB (DDL)
+```
+1. Creation of DB
+1. CREATE DATABASE IF NOT EXISTS db-name;
+2. USE db-name; //need to execute to choose on which DB CREATE TABLE etc commands will be executed.
+//make switching between DBs possible.
+3. DROP DATABASE IF EXISTS db-name; //dropping database.
+4. SHOW DATABASES; //list all the DBs in the server.
+5. SHOW TABLES; //list tables in the selected DB.
+```
+
