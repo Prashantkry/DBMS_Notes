@@ -227,9 +227,7 @@ To know multiple particular field data
 Select First_Name ,Salary from worker;
 ```
 
-<p align="center">
-DATA RETRIEVAL LANGUAGE (DRL)
-</p>
+__DATA RETRIEVAL LANGUAGE (DRL)__
 ```
 	1. Syntax: SELECT <set of column names> FROM <table_name>;
 	2. Order of execution from RIGHT to LEFT.
@@ -241,37 +239,54 @@ DATA RETRIEVAL LANGUAGE (DRL)
 		SELECT now();
 		SELECT ucase(); etc.
 ```
+
 4. WHERE
 ```
 	1. Reduce rows based on given conditions.
 	2. E.g., SELECT * FROM customer WHERE age > 18;
 ```
+
 5. BETWEEN
 ```
 1. SELECT * FROM customer WHERE age between 0 AND 100;
 2. In the above e.g., 0 and 100 are inclusive.
 ```
+
 6. IN
 ```
 1. Reduces OR conditions;
 2. e.g., SELECT * FROM officers WHERE officer_name IN ('Lakshay', ‘Maharana Pratap', ‘Deepika’);
 ```
+
 7. AND/OR/NOT
+```
 1. AND: WHERE cond1 AND cond2
 2. OR: WHERE cond1 OR cond2
 3. NOT: WHERE col_name NOT IN (1,2,3,4);
+```
+
 8. IS NULL
+```
 1. e.g., SELECT * FROM customer WHERE prime_status is NULL;
+```
+
 9. Pattern Searching / Wildcard (‘%’, ‘_’)
+```
 1. ‘%’, any number of character from 0 to n. Similar to ‘*’ asterisk in regex.
 2. ‘_’, only one character.
 3. SELECT * FROM customer WHERE name LIKE ‘%p_’;
+```
+
 10. ORDER BY
+```
 1. Sorting the data retrieved using WHERE clause.
 2. ORDER BY <column-name> DESC;
 3. DESC = Descending and ASC = Ascending
 4. e.g., SELECT * FROM customer ORDER BY name DESC;
+```
+
 11. GROUP BY
+```
 1. GROUP BY Clause is used to collect data from multiple records and group the result by one or more column. It is
 generally used in a SELECT statement.
 2. Groups into category based on column given.
@@ -279,17 +294,19 @@ generally used in a SELECT statement.
 4. All the column names mentioned after SELECT statement shall be repeated in GROUP BY, in order to successfully
 execute the query.
 5. Used with aggregation functions to perform various actions.
-1. COUNT()
-2. SUM()
-3. AVG()
-4. MIN()
-5. MAX()
+	1. COUNT()
+	2. SUM()
+	3. AVG()
+	4. MIN()
+	5. MAX()
+```
 12. DISTINCT
+```
 1. Find distinct values in the table.
 2. SELECT DISTINCT(col_name) FROM table_name;
 3. GROUP BY can also be used for the same
+```
 1. “Select col_name from table GROUP BY col_name;” same output as above DISTINCT query.
-CodeHelp
 2. SQL is smart enough to realise that if you are using GROUP BY and not using any aggregation function, then
 you mean “DISTINCT”.
 13. GROUP BY HAVING
