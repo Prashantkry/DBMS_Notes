@@ -217,3 +217,13 @@ DROP database IF EXISTS Orgainzations;
 
 ```
 
+To know single particular field data  
+```
+Select First_Name from worker;
+```
+
+To know multiple particular field data  
+```
+Select First_Name ,Salary from worker;
+
+```
