@@ -156,3 +156,65 @@ MANAGING DB (DDL)
 	5. SHOW TABLES; //list tables in the selected DB.
 ```
 
+
+**Making a complete Database of an Organization **
+```
+create database Organization;
+USE Organization;
+create table Worker(
+	Worker_Id INT NOT NULL primary KEY auto_increment,
+	First_Name CHAR(25),
+    Last_Name CHAR(25),
+    Salary int(15),
+    Joining_Date datetime,
+    Department char(25)
+);
+
+INSERT INTO Worker
+	(Worker_Id , First_Name , Last_Name , Salary , Joining_Date , Department)
+	VALUES (1,"Sweety","Reddi",100000,'28-08-23 09.00.00','TRA'),
+			(2,"Prashant","kr",12000,'28-09-23 08.00.00','Front-End Developer'),
+            (3,"Sagarika","Reddi",300000,'18-08-23 19.00.00','TRA'),
+            (4,"Bittu","kr",80000,'18-08-23 10.00.00','Full Stack Developer');
+            
+create table Bonus(		-- making foriegn key
+	Worker_Ref_Id INT,
+    Bonus_Amount int(15),
+    Bonus_Date datetime,
+    foreign key (Worker_Ref_Id)
+		references Worker(Worker_Id)
+        ON delete cascade
+);
+
+INSERT INTO Bonus
+	(Worker_Ref_Id , Bonus_Amount , Bonus_Date)
+	VALUES (1,100000,'28-08-23'),
+			(2,50000,'12-08-23'),
+            (3,5600,'04-08-23'),
+            (4,20000,'05-08-23');
+
+create table Title(		-- making foriegn key
+	Worker_Ref_Id INT,
+    Worker_Title CHAR(25),
+    Affected_from datetime,
+    foreign key (Worker_Ref_Id)
+		references Worker(Worker_Id)
+        ON delete cascade
+);
+
+INSERT INTO Title
+	(Worker_Ref_Id , Worker_Title , Affected_from)
+	VALUES (1,'TRA','28-08-23'),
+			(2,'web developer' ,'12-08-23'),
+            (3,'front-end','04-08-23'),
+            (4,'back-end','05-08-23');
+            
+show databases;
+show tables;
+select *from Worker;
+select *from bonus;
+select *from title;
+DROP database IF EXISTS Orgainzations;
+
+```
+
