@@ -143,8 +143,7 @@ MANAGING DB (DDL)
 ```
 1. Creation of DB
 1. CREATE DATABASE IF NOT EXISTS db-name;
-2. USE db-name; //need to execute to choose on which DB CREATE TABLE etc commands will be executed.
-//make switching between DBs possible.
+2. USE db-name; //need to execute to choose on which DB CREATE TABLE etc commands will be executed. //make switching between DBs possible.
 3. DROP DATABASE IF EXISTS db-name; //dropping database.
 4. SHOW DATABASES; //list all the DBs in the server.
 5. SHOW TABLES; //list tables in the selected DB.
