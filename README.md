@@ -4,7 +4,9 @@ Create Table
 ```create database College;```
 
 Select Database Name 
-```USE college;```
+```
+USE college;
+```
 
 Create Table
 ```
@@ -16,6 +18,7 @@ CREATE table Student(
 ```
 
 -- Inserting data in table 
+> addding data in table is called entity  or tuple 
 ```
 INSERT INTO Student VALUES(1,'Prasahnt');
 ```
