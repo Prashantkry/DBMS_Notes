@@ -227,28 +227,37 @@ To know multiple particular field data
 Select First_Name ,Salary from worker;
 ```
 
+# ---------------------------------------------------------------------------------------------------------------------------------------
 
 <p align="center">
-__DATA RETRIEVAL LANGUAGE (DRL)__
+DATA RETRIEVAL LANGUAGE (DRL)
 </p>
-1. Syntax: SELECT <set of column names> FROM <table_name>;
-2. Order of execution from RIGHT to LEFT.
-3. Q. Can we use SELECT keyword without using FROM clause?
-1. Yes, using DUAL Tables.
-2. Dual tables are dummy tables created by MySQL, help users to do certain obvious actions without referring to user
-defined tables.
-3. e.g., SELECT 55 + 11;
-SELECT now();
-SELECT ucase(); etc.
+```
+	1. Syntax: SELECT <set of column names> FROM <table_name>;
+	2. Order of execution from RIGHT to LEFT.
+	3. Q. Can we use SELECT keyword without using FROM clause?
+		1. Yes, using DUAL Tables.
+		2. Dual tables are dummy tables created by MySQL, help users to do certain obvious actions without referring to user
+		defined tables.
+		3. e.g., SELECT 55 + 11;
+		SELECT now();
+		SELECT ucase(); etc.
+```
 4. WHERE
-1. Reduce rows based on given conditions.
-2. E.g., SELECT * FROM customer WHERE age > 18;
+```
+	1. Reduce rows based on given conditions.
+	2. E.g., SELECT * FROM customer WHERE age > 18;
+```
 5. BETWEEN
+```
 1. SELECT * FROM customer WHERE age between 0 AND 100;
 2. In the above e.g., 0 and 100 are inclusive.
+```
 6. IN
+```
 1. Reduces OR conditions;
 2. e.g., SELECT * FROM officers WHERE officer_name IN ('Lakshay', ‘Maharana Pratap', ‘Deepika’);
+```
 7. AND/OR/NOT
 1. AND: WHERE cond1 AND cond2
 2. OR: WHERE cond1 OR cond2
