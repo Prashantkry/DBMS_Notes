@@ -99,7 +99,7 @@ USE college;
 Create Table
 ```
 CREATE table Student(
-	**-- 	keyword should be in capital  letter**
+	**-- 	keyword should be in capital  letter   **
 	id INT PRIMARY KEY,	  
     name VARCHAR(255)	-- 255 is length here
 );
@@ -156,8 +156,7 @@ MANAGING DB (DDL)
 	5. SHOW TABLES; //list tables in the selected DB.
 ```
 
-
-** Making a complete Database of an Organization **
+**     Making a complete Database of an Organization         **
 ```
 create database Organization;
 USE Organization;
