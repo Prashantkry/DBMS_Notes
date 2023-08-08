@@ -290,9 +290,9 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 	1. Find distinct values in the table.
 	2. SELECT DISTINCT(col_name) FROM table_name;
 	3. GROUP BY can also be used for the same
- 		1. “Select col_name from table GROUP BY col_name;” same output as above DISTINCT query
+		1. “Select col_name from table GROUP BY col_name;” same output as above DISTINCT query
 		2. SQL is smart enough to realise that if you are using GROUP BY and not using any aggregation function, then
-you mean “DISTINCT”
+		you mean “DISTINCT”
 
 
 13. GROUP BY HAVING
