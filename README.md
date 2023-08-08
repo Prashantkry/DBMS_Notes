@@ -116,7 +116,7 @@ Deleting data in table
 DROP database IF EXISTS Data_base_name;
 ```
 
--- show data available in table 
+show data available in table 
 ```
 SELECT * FROM Data_base_name;
 ```
@@ -156,7 +156,7 @@ MANAGING DB (DDL)
 	5. SHOW TABLES; //list tables in the selected DB.
 ```
 
-**Making a complete Database of an Organization**
+__Making a complete Database of an Organization__
 ```
 create database Organization;
 USE Organization;
