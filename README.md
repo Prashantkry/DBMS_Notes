@@ -253,7 +253,9 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 
 5. BETWEEN
 	1. SELECT * FROM customer WHERE age between 0 AND 100;
-		__0 and 100 are inclusive__
+		0 and 100 are inclusive
+	2. select *from WORKER WHERE salary between 80000 and 300000;
+
 
 6. IN
 	1. Reduces OR conditions;
