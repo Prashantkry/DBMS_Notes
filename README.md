@@ -237,16 +237,23 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 	2. Dual tables are dummy tables created by MySQL, help users to do certain obvious actions without referring to user
 	defined tables.
 	3. e.g., SELECT 55 + 11;
-	SELECT now();
-	SELECT ucase(); etc.
+
+	
+	SELECT now();	-- -> to know current time and  date
+	
+	select ucase("cse");	-- convert to upper case
+	
+	select lcase("CSE");	-- convert to lower case
+
 
 4. WHERE
 	1. Reduce rows based on given conditions.
-	2. E.g., SELECT * FROM customer WHERE age > 18;
+		E.g., 	select *from WORKER WHERE salary>50000;
+			select *from WORKER WHERE department='TRA';
 
 5. BETWEEN
 	1. SELECT * FROM customer WHERE age between 0 AND 100;
-	2. In the above e.g., 0 and 100 are inclusive.
+		__0 and 100 are inclusive__
 
 6. IN
 	1. Reduces OR conditions;
