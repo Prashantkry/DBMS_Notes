@@ -109,6 +109,8 @@ Inserting data in table
 > addding data in table is called entity  or tuple 
 ```
 INSERT INTO Student VALUES(1,'Prasahnt');
+INSERT INTO Worker VALUES(5,"Sweety","",20000,'28-08-23 09.00.00','Front-End Developer');
+INSERT INTO Worker VALUES(6,"Rahul","Kr",20000,null,'Front-End Developer');
 ```
 
 Deleting data in table 
@@ -259,16 +261,20 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 
 6. IN
 	1. Reduces OR conditions;
-	2. e.g., SELECT * FROM officers WHERE officer_name IN ('Lakshay', ‘Maharana Pratap', ‘Deepika’);
+		SELECT * FROM officers WHERE officer_name IN ('Lakshay', ‘Maharana Pratap', ‘Deepika’);
+		select * from Worker WHERE DEPARTMENT in ('TRA','Front-End Developer');
 
 7. AND/OR/NOT
 	1. AND: WHERE cond1 AND cond2
+		select * from Worker WHERE DEPARTMENT = 'TRA' and DEPARTMENT = 'Front-End Developer';
 	2. OR: WHERE cond1 OR cond2
+		select * from Worker WHERE DEPARTMENT = 'TRA' OR DEPARTMENT = 'Front-End Developer';
 	3. NOT: WHERE col_name NOT IN (1,2,3,4);
-
+		select * from Worker WHERE DEPARTMENT NOT IN ('TRA','Front-End Developer');
 
 8. IS NULL
-	1. e.g., SELECT * FROM customer WHERE prime_status is NULL;
+	SELECT * FROM customer WHERE prime_status is NULL;
+	select *from Worker where Joining_Date is Null;
 
 9. Pattern Searching / Wildcard (‘%’, ‘_’)
 	1. ‘%’, any number of character from 0 to n. Similar to ‘*’ asterisk in regex.
