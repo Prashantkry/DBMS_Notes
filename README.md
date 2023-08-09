@@ -279,13 +279,20 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 9. Pattern Searching / Wildcard (‘%’, ‘_’)
 	1. ‘%’, any number of character from 0 to n. Similar to ‘*’ asterisk in regex.
 	2. ‘_’, only one character.
-	3. SELECT * FROM customer WHERE name LIKE ‘%p_’;
+		SELECT * FROM customer WHERE name LIKE ‘%p_’;
+		-- wild card 
+		select *from Worker where First_Name LIKE '%i%';
+		select *from Worker where First_Name LIKE '___t%';
+
 
 10. ORDER BY
 	1. Sorting the data retrieved using WHERE clause.
 	2. ORDER BY <column-name> DESC;
 	3. DESC = Descending and ASC = Ascending
-	4. e.g., SELECT * FROM customer ORDER BY name DESC;
+		SELECT * FROM customer ORDER BY name DESC;
+		-- sorting by default ascending use dec for descending 
+		select *from Worker order by salary;
+		select *from Worker order by salary desc;
 
 11. GROUP BY
 	1. GROUP BY Clause is used to collect data from multiple records and group the result by one or more column. It is
@@ -303,11 +310,31 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 
 12. DISTINCT
 	1. Find distinct values in the table.
-	2. SELECT DISTINCT(col_name) FROM table_name;
-	3. GROUP BY can also be used for the same
+		SELECT DISTINCT(col_name) FROM table_name;
+		-- distnict or unique value 
+		select distinct department from Worker ;
+	2. GROUP BY can also be used for the same
 		1. “Select col_name from table GROUP BY col_name;” same output as above DISTINCT query
 		2. SQL is smart enough to realise that if you are using GROUP BY and not using any aggregation function, then
 		you mean “DISTINCT”
+		
+		-- group by	-> to know no of emoployee in  different department
+		select department, count(department) from worker group by department;
+	AVG
+		-- AVG salary per department 
+		select department, AVG(salary) from worker group by department;
+
+	Min
+	-- Min salary per department 
+		select department, MIN(salary) from worker group by department;
+	
+	Max
+	-- Max salary per department 
+		select department, MAX(salary) from worker group by department;
+	
+	Sum
+	-- Sum salary per department 
+		select department, SUM(salary) from worker group by department;
 
 
 13. GROUP BY HAVING
@@ -315,14 +342,16 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 	2. Similar to WHERE.
 	3. Select COUNT(cust_id), country from customer GROUP BY country HAVING COUNT(cust_id) > 50;
 	4. WHERE vs HAVING
-	1. Both have same function of filtering the row base on certain conditions.
-	2. WHERE clause is used to filter the rows from the table based on specified condition
-	3. HAVING clause is used to filter the rows from the groups based on the specified condition.
-	4. HAVING is used after GROUP BY while WHERE is used before GROUP BY clause.
-	5. If you are using HAVING, GROUP BY is necessary.
-	6. WHERE can be used with SELECT, UPDATE & DELETE keywords while GROUP BY used with SELECT
+		1. Both have same function of filtering the row base on certain conditions.
+		2. WHERE clause is used to filter the rows from the table based on specified condition
+		3. HAVING clause is used to filter the rows from the groups based on the specified condition.
+		4. HAVING is used after GROUP BY while WHERE is used before GROUP BY clause.
+		5. If you are using HAVING, GROUP BY is necessary.
+		6. WHERE can be used with SELECT, UPDATE & DELETE keywords while GROUP BY used with SELECT
 
-
+	
+	-- group by having 
+	select department, COUNT(department) FROM Worker group by department HAVING COUNT(department)>2;
 ```
 
 
