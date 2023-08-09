@@ -348,7 +348,6 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 		4. HAVING is used after GROUP BY while WHERE is used before GROUP BY clause.
 		5. If you are using HAVING, GROUP BY is necessary.
 		6. WHERE can be used with SELECT, UPDATE & DELETE keywords while GROUP BY used with SELECT
-
 	
 	-- group by having 
 	select department, COUNT(department) FROM Worker group by department HAVING COUNT(department)>2;
