@@ -74,4 +74,16 @@ CHECK
 	-- Inserting in Unique and Check
 	INSERT INTO profile VALUES(102,'Prashant',93);
 
+
+
+Default
+	1. Set default value of the column.
+	2. CREATE TABLE account (
+		…
+		saving-rate DOUBLE NOT NULL DEFAULT 4.25,
+		…
+	)
+
+
+
 ```
