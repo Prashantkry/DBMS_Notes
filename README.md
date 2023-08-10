@@ -116,6 +116,8 @@ INSERT INTO Worker VALUES(6,"Rahul","Kr",20000,null,'Front-End Developer');
 Deleting data in table 
 ```
 DROP database IF EXISTS Data_base_name;
+	-- deleting table 
+	DROP TABLE student;
 ```
 
 show data available in table 
@@ -502,6 +504,19 @@ Foreign Key
 		FOREIGN KEY (cust_id) REFERENCES customer(id)
 	);
 
+				OR
+	
+	-- adding another table with forign key 
+	CREATE TABLE staff(
+		satff_id INT PRIMARY KEY ,
+	    name VARCHAR(30),
+	    address VARCHAR(100),
+	    phone INT,
+	    FOREIGN KEY(phone) REFERENCES TEACHER(id)
+	);
+
+
+
 UNIQUE
 	Unique, can be null, table can have multiple unique atributes.
 	CREATE TABLE customer (
@@ -509,6 +524,9 @@ UNIQUE
 		email VARCHAR(1024) UNIQUE,
 		…
 	);
+
+
+
 CHECK
 	CREATE TABLE customer (
 		…
@@ -516,6 +534,19 @@ CHECK
 		…
 	);
 	“age_check”, can also avoid this, MySQL generates name of constraint automatically
+	
+		
+	
+	-- unique and check 
+	CREATE TABLE profile(
+		reg_no INT PRIMARY KEY,
+	    name VARCHAR(250) UNIQUE,
+	    marks INT ,
+	    CONSTRAINT minScore CHECK(marks>45)
+	);
 
+	
+	-- Inserting in Unique and Check
+	INSERT INTO profile VALUES(102,'Prashant',93);
 
 ```
