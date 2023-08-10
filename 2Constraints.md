@@ -87,3 +87,67 @@ Default
 
 
 ```
+
+All code till now 
+```
+show databases;
+use school;
+show tables;
+INSERT INTO TEACHER VALUE(2,'Prashant');
+INSERT INTO TEACHER VALUE(3,'BOOK'),
+						 (4,'COPY')	;
+SELECT * FROM TEACHER;
+
+-- add column 
+ALTER TABLE teacher
+ADD salary int;
+
+-- adding data in column of salary 
+-- UPDATE teacher
+-- SET salary=values(2000),(30000),(40000),(50000)
+-- WHERE id=1,2,3,4;
+
+
+-- adding another table 
+CREATE TABLE student(
+	student_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    roll INT
+);
+
+-- deleting table 
+DROP TABLE student;
+
+-- adding another table with forign key 
+CREATE TABLE staff(
+	satff_id INT PRIMARY KEY ,
+    name VARCHAR(30),
+    address VARCHAR(100),
+    phone INT,
+    FOREIGN KEY(phone) REFERENCES TEACHER(id)
+);
+
+
+-- unique and check 
+CREATE TABLE profile(
+	reg_no INT PRIMARY KEY,
+    name VARCHAR(250) UNIQUE,
+    marks INT ,
+    CONSTRAINT minScore CHECK(marks>45),
+    roll_no INT NOT NULL DEFAULT 10
+);
+
+-- Inserting in Unique and Check
+INSERT INTO profile VALUES(102,'Prashant',93);
+
+SELECT *FROM profile;
+
+DROP TABLE profile;
+
+-- Default
+
+
+
+
+```
+
