@@ -353,13 +353,132 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 	select department, COUNT(department) FROM Worker group by department HAVING COUNT(department)>2;
 ```
 
+All Code Till Now 
+```
+create database Organization;
+USE Organization;
+create table Worker(
+	Worker_Id INT NOT NULL primary KEY auto_increment,
+	First_Name CHAR(25),
+    Last_Name CHAR(25),
+    Salary int(15),
+    Joining_Date datetime,
+    Department char(25)
+);
+
+INSERT INTO Worker
+	(Worker_Id , First_Name , Last_Name , Salary , Joining_Date , Department)
+	VALUES  (1,"Sweety","Reddi",100000,'28-08-23 09.00.00','TRA'),
+			(2,"Prashant","kr",12000,'28-09-23 08.00.00','Front-End Developer'),
+            (3,"Sagarika","Reddi",300000,'18-08-23 19.00.00','TRA'),
+            (4,"Bittu","kr",80000,'18-08-23 10.00.00','Full Stack Developer');
+            
+create table Bonus(		-- making foriegn key
+	Worker_Ref_Id INT,
+    Bonus_Amount int(15),
+    Bonus_Date datetime,
+    foreign key (Worker_Ref_Id)
+		references Worker(Worker_Id)
+        ON delete cascade
+);
+
+INSERT INTO Bonus
+	(Worker_Ref_Id , Bonus_Amount , Bonus_Date)
+	VALUES (1,100000,'28-08-23'),
+			(2,50000,'12-08-23'),
+            (3,5600,'04-08-23'),
+            (4,20000,'05-08-23');
+
+create table Title(		-- making foriegn key
+	Worker_Ref_Id INT,
+    Worker_Title CHAR(25),
+    Affected_from datetime,
+    foreign key (Worker_Ref_Id)
+		references Worker(Worker_Id)
+        ON delete cascade
+);
+
+INSERT INTO Title
+	(Worker_Ref_Id , Worker_Title , Affected_from)
+	VALUES (1,'TRA','28-08-23'),
+			(2,'web developer' ,'12-08-23'),
+            (3,'front-end','04-08-23'),
+            (4,'back-end','05-08-23');
+            
+show databases;
+show tables;
+select *from Worker;
+select *from bonus;
+select *from title;
+DROP database IF EXISTS OrEgainzations;
+
+Select First_Name from worker;
+Select First_Name ,Salary from worker;
+
+select 44+55;
+
+SELECT now();	-- -> to know current time and  date
+
+select ucase("cse");	-- convert to upper case
+
+select lcase("CSE");	-- convert to lower case
+
+select *from WORKER WHERE salary>50000;
+select *from WORKER WHERE department='TRA';
+
+
+select *from WORKER WHERE salary between 80000 and 300000;
+
+select * from Worker WHERE DEPARTMENT = 'TRA' OR DEPARTMENT = 'Front-End Developer';
+select * from Worker WHERE DEPARTMENT = 'TRA' and DEPARTMENT = 'Front-End Developer';
+INSERT INTO Worker VALUES(5,"Sweety","",20000,'28-08-23 09.00.00','Front-End Developer');
+select * from Worker WHERE DEPARTMENT in ('TRA','Front-End Developer');
+select * from Worker WHERE DEPARTMENT NOT IN ('TRA','Front-End Developer');
+INSERT INTO Worker VALUES(6,"Rahul","Kr",20000,null,'Front-End Developer');
+select *from Worker where Joining_Date is Null;
+
+-- wild card 
+select *from Worker where First_Name LIKE '%i%';
+select *from Worker where First_Name LIKE '___t%';
+
+
+-- sorting by default ascending use dec for descending 
+select *from Worker order by salary;
+select *from Worker order by salary desc;
+
+-- distnict or unique value 
+select distinct department from Worker ;
+
+-- group by	-> to know no of emoployee in  different department
+select department, count(department) from worker group by department;
+
+-- AVG salary per department 
+select department, AVG(salary) from worker group by department;
+
+-- Min salary per department 
+select department, MIN(salary) from worker group by department;
+
+
+-- Max salary per department 
+select department, MAX(salary) from worker group by department;
+
+
+-- Sum salary per department 
+select department, SUM(salary) from worker group by department;
+
+-- group by having 
+select department, COUNT(department) FROM Worker group by department HAVING COUNT(department)>2;
+
+
+```
+
 
 __Constraints__
 ```
 Primary Key
 	Not NULL
 	Unique
-	only 1 primary per data
+	only 1 primary key per table
 	try to put int mostly
 
 	Syntax:
