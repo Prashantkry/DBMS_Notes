@@ -34,6 +34,30 @@ ALTER OPERATIONS
     ALTER TABLE customer RENAME TO customer-details;
 
 ```
+All code of alter table 
+```
+SHOW DATABASES;
+USE SCHOOL;
+SHOW TABLES;
+SELECT * FROM teacher;
+
+-- modify data or add data in coln salary 
+ALTER TABLE teacher MODIFY salary DOUBLE NOT NULL DEFAULT 0;
+
+-- describe details of table 
+DESC teacher;
+
+-- rename table 
+ALTER TABLE teacher RENAME TO guru_Ji;
+
+
+-- rename coln *HERE WE HAD TO TELL DATA TYPE ALSO IN COMMAND 
+ALTER TABLE teacher CHANGE COLUMN salary salary_teacher INT;
+
+
+-- DROP COLUMN 
+ALTER TABLE teacher DROP salary_teacher;
+```
 
 DATA MANIPULATION LANGUAGE (DML)
 ```
