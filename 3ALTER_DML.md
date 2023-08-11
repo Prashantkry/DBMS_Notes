@@ -34,6 +34,7 @@ ALTER OPERATIONS
     ALTER TABLE customer RENAME TO customer-details;
 
 ```
+
 All code of alter table 
 ```
 SHOW DATABASES;
