@@ -64,3 +64,4 @@ JOINING TABLES
    SET OPERATIONS
         1. Used to combine multiple select statements.
         2. Always gives distinct rows.
+    ![Alt X](https://github.com/Prashantkry/DMS_Notes/blob/main/Images/joints.png)
