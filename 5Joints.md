@@ -146,6 +146,7 @@ JOINING TABLES
  Co-related sub-queries
  
 <img width="389" alt="image" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/4bfe0cc2-f301-4358-a1c7-8bcf8aa33a96">
+
 </br>
 
 <img width="515" alt="image" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/f65f1110-3c05-42bf-9591-4b8477c5b801">
