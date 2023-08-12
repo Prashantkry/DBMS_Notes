@@ -11,13 +11,13 @@ JOINING TABLES
 ```
 3. INNER JOIN
     1. Returns a resultant table that has matching values from both the tables or all the tables.
+        There should be a common attribute b/w both table.
     2. SELECT column-list FROM table1 INNER JOIN table2 ON condition1
-        INNER JOIN table3 ON condition2
-          …;
+        INNER JOIN table3 ON condition2 ... ;
     3. Alias in MySQL (AS)
         1. Aliases in MySQL is used to give a temporary name to a table or a column in a table for the purpose of
             a particular query. It works as a nickname for expressing the tables or column names.
-             It makes the query short and neat.
+            It makes the query short and neat.
         3. SELECT col_name AS alias_name FROM table_name;
         4. SELECT col_name1, col_name2,... FROM table_name AS alias_name;
 ```
