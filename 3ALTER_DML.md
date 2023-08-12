@@ -93,6 +93,15 @@ DATA MANIPULATION LANGUAGE (DML)
             );
 
 
+            -- create a child table with foreign key
+            CREATE TABLE CHILD_DML(
+            	CHILD_slNo INT PRIMARY KEY ,
+                CHILD_name VARCHAR(30),
+                CHILD_salary INTEGER,
+                FOREIGN KEY(CHILD_slNo) REFERENCES dml(slNo) ON DELETE CASCADE
+            );
+
+
      4. ON DELETE NULL - (can FK have null values?)
                 All value of foreign key or child table will have NULL value.
             CREATE TABLE ORDER (
@@ -103,6 +112,12 @@ DATA MANIPULATION LANGUAGE (DML)
             );
 
 
+            CREATE TABLE CHILD_DML(
+            	CHILD_slNo INT PRIMARY KEY ,
+                CHILD_name VARCHAR(30),
+                CHILD_salary INTEGER,
+                FOREIGN KEY(CHILD_slNo) REFERENCES dml(slNo) ON DELETE SET NULL
+            );
 
 
 4. REPLACE
@@ -114,3 +129,92 @@ DATA MANIPULATION LANGUAGE (DML)
 
 ```
 
+All Code Till Now 
+```
+-- DML
+
+-- show database 
+SHOW DATABASES;
+
+-- select database 
+USE school;
+
+-- create table  
+CREATE TABLE dml(
+	slNo INT PRIMARY KEY,
+    name VARCHAR(30),
+    salary INT 
+);
+
+--  show table 
+SHOW TABLES;
+
+-- SHOW data in table
+SELECT * FROM dml;
+
+-- insert data in table 
+INSERT INTO dml VALUES
+			(1,'A',200),
+            (2,'B',400),
+            (3,'C',100),
+            (4,'D',50);
+
+INSERT INTO dml(slNo,name) VALUES(7,'F');
+
+-- add column 
+ALTER TABLE dml ADD COLUMN adress VARCHAR(100);
+
+-- update 
+UPDATE dml SET salary=420 where slNo=5;
+
+-- update multiple rows 
+-- we had to set security to false for multiple update 
+-- we can + - * / in int data type 
+SET SQL_SAFE_UPDATES=1;	-- can be changed to 0 or 1
+UPDATE dml SET adress='Patna';
+
+
+-- delte a row 
+DELETE FROM dml where slNo=3;
+
+-- delte multiple row or complete table 
+DELETE FROM dml ;
+            
+-- delte a column  
+ALTER TABLE dml DROP adress;
+
+-- create a child table with foreign key
+CREATE TABLE CHILD_DML(
+	CHILD_slNo INT PRIMARY KEY ,
+    CHILD_name VARCHAR(30),
+    CHILD_salary INTEGER,
+    FOREIGN KEY(CHILD_slNo) REFERENCES dml(slNo) ON DELETE CASCADE
+);
+
+DROP TABLES CHILD_DML ;
+SELECT * FROM CHILD_DML;
+
+-- Inserting data in it 
+-- (CHILD_slNo,CHILD_name,CHILD_salary,CHILD_AGE) 
+INSERT INTO CHILD_DML VALUES
+					  (1,'Mohan',20000),
+                      (2,'Prajapati',30000),
+                      (3,'Shayam',10000),
+                      (4,'Lal',5000),
+                      (5,'Kunware',22000);
+
+-- DELETE CASCADE
+-- when deleted it will  also remove data from child table 
+DELETE FROM dml WHERE slNo=2;
+
+-- replace 
+-- data present then replace if not present then insert. also add null if value not provided in replace 
+REPLACE INTO CHILD_DML ( CHILD_slNo,CHILD_name,CHILD_salary)VALUES(7,'BareBabu',900);
+```
+
+
+```
+Update if data not available then it will not do anything
+but
+Replace will add that data in table 
+```
