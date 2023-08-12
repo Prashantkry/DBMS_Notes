@@ -212,7 +212,7 @@ DELETE FROM dml WHERE slNo=2;
 REPLACE INTO CHILD_DML ( CHILD_slNo,CHILD_name,CHILD_salary)VALUES(7,'BareBabu',900);
 ```
 
-
+KeyPoints
 ```
 Update if data not available then it will not do anything
 but
