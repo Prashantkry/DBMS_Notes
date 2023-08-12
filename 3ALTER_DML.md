@@ -83,7 +83,9 @@ DATA MANIPULATION LANGUAGE (DML)
     2. DELETE FROM table-name; //all rows will be deleted.
     3. DELETE CASCADE - (to overcome DELETE constraint of Referential constraints)
           1. What would happen to child entry if parent table’s entry is deleted?
-          2. CREATE TABLE ORDER (
+                All data of child table will also be deleted.
+
+            CREATE TABLE ORDER (
                 order_id int PRIMARY KEY,
                 delivery_date DATE,
                 cust_id INT,
@@ -92,12 +94,13 @@ DATA MANIPULATION LANGUAGE (DML)
 
 
      4. ON DELETE NULL - (can FK have null values?)
-        CREATE TABLE ORDER (
-            order_id int PRIMARY KEY,
-            delivery_date DATE,
-            cust_id INT,
-            FOREIGN KEY(cust_id) REFERENCES customer(id) ON DELETE SET NULL
-        );
+                All value of foreign key or child table will have NULL value.
+            CREATE TABLE ORDER (
+                order_id int PRIMARY KEY,
+                delivery_date DATE,
+                cust_id INT,
+                FOREIGN KEY(cust_id) REFERENCES customer(id) ON DELETE SET NULL
+            );
 
 
 
