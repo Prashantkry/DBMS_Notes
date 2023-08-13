@@ -199,6 +199,9 @@ CROSS JOIN project AS p;
             3. Number of column, order of column must be same for table1 and table2.
 
 
+	-- Union vS Joins 
+		Union works on rows as it will find out the distnict rows by combining both table.
+		Full Joins find out columns a/q to requirement that are matching 
 
         4. INTERSECT
             1. Returns common values of the tables.
@@ -214,36 +217,96 @@ CROSS JOIN project AS p;
             3. SELECT column_list FROM table1 LEFT JOIN table2 ON condition WHERE table2.column_name IS NULL;
             4. e.g., SELECT id FROM table-1 LEFT JOIN table-2 USING(id) WHERE table-2.id IS NULL;
 
+```
 
 
-    SUB QUERIES
-            1. Outer query depends on inner query.
-            2. Alternative to joins.
-            3. Nested queries.
-            4. SELECT column_list (s) FROM table_name WHERE column_name OPERATOR
-            (SELECT column_list (s) FROM table_name [WHERE]);
-            5. e.g., SELECT * FROM table1 WHERE col1 IN (SELECT col1 FROM table1);
-            6. Sub queries exist mainly in 3 clauses
-                1. Inside a WHERE clause.
-                2. Inside a FROM clause.
-                3. Inside a SELECT clause
+All Code of Set Operations
+```
+-- Set Operations
+CREATE DATABASE library;
+SHOW DATABASES;
+CREATE TABLE books(
+	id INT PRIMARY KEY,
+    name VARCHAR(120),
+    type VARCHAR(50)
+);
+INSERT INTO books VALUES(1,'C++','Computer'),
+						(2,'DSA','Computer'),
+                        (3,'Math','Math'),
+                        (4,'Human Life','kids'),
+                        (5,'Calculus','Math'),
+						(6,'ABC','kids');
+SELECT * FROM books;
+DROP TABLE books;
 
-            7. Subquery using FROM clause
-                1. SELECT MAX(rating) FROM (SELECT * FROM movie WHERE country = ‘India’) as temp;
+CREATE TABLE magzine(
+	id INT PRIMARY KEY,
+    name VARCHAR(120),
+    type VARCHAR(50)
+);
+INSERT INTO magzine VALUES(1,'Star Lord','Adult'),
+                        (3,'Champak','Kids'),
+                        (5,'Balhansh','Kids');
+INSERT INTO magzine VALUES(7,'Java','Computer');
+SELECT * FROM magzine;
+DROP TABLE magzine;
 
-            8. Subquery using SELECT
-                1. SELECT (SELECT column_list(s) FROM T_name WHERE condition), columnList(s) FROM T2_name WHERE
-            condition;
+-- Union
+SELECT * FROM books 
+UNION 
+SELECT * FROM magzine; 
 
-            9. Derived Subquery
-                1. SELECT columnLists(s) FROM (SELECT columnLists(s) FROM table_name WHERE [condition]) as new_table_name;
+-- Q. List out all name who read kids book
+SELECT * FROM books WHERE type ='kids'
+UNION
+SELECT * FROM books WHERE type ='kids';
 
-            10. Co-related sub-queries
-                1. With a normal nested subquery, the inner SELECT query
-                    runs first and executes once, returning values to be used by
-                    the main query. A correlated subquery, however, executes
-                    once for each candidate row considered by the outer query.
-                    In other words, the inner query is driven by the outer query
+-- Intersection
+	-- INTERSECT will not work directly so we had to emulate it using inner join 
+-- Q. List all pepole who read both books & magzine ?
+SELECT * FROM magzine INNER JOIN books using (id); 
+SELECT books.* FROM magzine INNER JOIN books using (id); 
+
+-- Minus Here we had to put NULL which we are not choosing 
+-- List all people who read books but not magzine
+SELECT books .* FROM books LEFT JOIN magzine using (id)
+WHERE magzine.id is NULL;
+
+-- List all people who read magzine but not books
+SELECT magzine .* FROM magzine LEFT JOIN books using (id)
+WHERE books.id is NULL;
+```
+
+
+SUB QUERIES
+```
+    1. Outer query depends on inner query.
+    2. Alternative to joins.
+    3. Nested queries.
+    4. SELECT column_list (s) FROM table_name WHERE column_name OPERATOR
+    (SELECT column_list (s) FROM table_name [WHERE]);
+    5. e.g., SELECT * FROM table1 WHERE col1 IN (SELECT col1 FROM table1);
+    6. Sub queries exist mainly in 3 clauses
+	1. Inside a WHERE clause.
+	2. Inside a FROM clause.
+	3. Inside a SELECT clause
+
+    7. Subquery using FROM clause
+	1. SELECT MAX(rating) FROM (SELECT * FROM movie WHERE country = ‘India’) as temp;
+
+    8. Subquery using SELECT
+	1. SELECT (SELECT column_list(s) FROM T_name WHERE condition), columnList(s) FROM T2_name WHERE
+    condition;
+
+    9. Derived Subquery
+	1. SELECT columnLists(s) FROM (SELECT columnLists(s) FROM table_name WHERE [condition]) as new_table_name;
+
+    10. Co-related sub-queries
+	1. With a normal nested subquery, the inner SELECT query
+	    runs first and executes once, returning values to be used by
+	    the main query. A correlated subquery, however, executes
+	    once for each candidate row considered by the outer query.
+	    In other words, the inner query is driven by the outer query
 ```
 <img width="385" alt="image" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/60b3a8fc-1121-4186-9acf-23f0f1c61a4e">
 
