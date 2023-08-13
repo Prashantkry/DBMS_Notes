@@ -82,6 +82,7 @@ JOINING TABLES
 <img width="497" alt="joints" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/7d88d559-a25d-4ae3-a2d6-72e5601fcacf">
 
 
+
 **Set**
 ```
        SET OPERATIONS
