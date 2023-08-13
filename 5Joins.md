@@ -322,3 +322,88 @@ SUB QUERIES
 
 
 
+All code of SUB QUERIES
+```
+-- Sub Queries -> queries under quries 
+	-- Alternative of JOINS 
+-- Here Outer Query depends on Inner Query Q(q) whatever result inner query gives Outer work on it
+
+CREATE DATABASE library;
+USE library;
+SHOW DATABASES;
+CREATE TABLE books(
+	id INT PRIMARY KEY,
+    name VARCHAR(120),
+    type VARCHAR(50),
+    item INT
+);
+INSERT INTO books VALUES(1,'C++','Computer',68),
+			(2,'DSA','Computer',56),
+                        (3,'Math','Math',30),
+                        (4,'Human Life','kids',50),
+                        (5,'Calculus','Math',20),
+			(6,'ABC','kids',10);
+ALTER TABLE books ADD COLUMN item INT;
+SELECT * FROM books;
+DROP TABLE books;
+
+CREATE TABLE magzine(
+	id INT PRIMARY KEY,
+    name VARCHAR(120),
+    type VARCHAR(50),
+    item INT
+);
+INSERT INTO magzine VALUES(1,'Star Lord','Adult',58),
+                        (3,'Champak','Kids',40),
+                        (5,'Balhansh','Kids',20);
+
+INSERT INTO magzine VALUES(7,'Java','Computer',55);
+INSERT INTO magzine VALUES(8,'Add','Math',90);
+ALTER TABLE magzine ADD COLUMN item INT;
+
+SELECT * FROM magzine;
+DROP TABLE magzine;
+
+-- WHERE CLAUSE IN SAME TABLE 
+SELECT * FROM books WHERE type IN (SELECT type FROM books WHERE type='Kids');
+
+-- WHERE CLAUSE IN different TABLE magzine reading more than 1 
+SELECT * FROM books WHERE id IN (SELECT id FROM magzine group by id having count(id)>0);
+
+-- single value subquery
+-- Q. item of book having no > avg(no)
+SELECT * FROM books WHERE item>(SELECT avg(item) FROM books);
+
+-- From Clause - return derived table 
+-- SUBQUERY OF query -> we had to store returned table in a name 
+-- Q. select max reader whose name start with C
+SELECT MAX(item) FROM (SELECT * FROM books WHERE name LIKE '%C%') AS C_reader;
+
+
+-- Corelated Subquery 
+-- Find 3rd higher no of item 
+SELECT * FROM books AS b1
+WHERE 3=(
+	SELECT COUNT(b2.item)
+    FROM books b2 
+    WHERE b2.item>=b1.item
+);
+
+
+
+-- SQL Views 
+-- It save required view temporary a/q to requirement 
+SELECT * FROM books;
+-- Creating view custom_view as select name of books and its item no
+CREATE VIEW custom_view AS SELECT name , item FROM books;
+-- Viewing from view 
+SELECT * FROM custom_view;
+
+-- ALTER can also be done here 
+ALTER VIEW custom_view AS SELECT id,name , item FROM books;
+
+-- drop also possible 
+DROP VIEW IF EXISTS custom_view;
+
+
+```
