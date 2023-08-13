@@ -83,6 +83,107 @@ JOINING TABLES
 
 
 
+All Code till now
+```
+-- Joins 
+CREATE DATABASE joinsConcept;
+USE joinsConcept;
+DROP DATABASE company;
+
+CREATE TABLE company(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(40),
+    salary INT,
+    age INT,
+    phone_No BIGINT
+);
+
+INSERT INTO company VALUES
+						(1,'Sam',20000,23,7991132070),
+                        (2,'Ram',400000,43,7991132071),
+                        (3,'Mohan',34000,53,7991132072),
+                        (4,'Dam',2000,13,7991132073),
+                        (5,'Leela',10000,83,7991132074);
+
+SELECT * FROM company;
+DROP TABLE company;
+
+CREATE TABLE staff(
+	staff_id INT PRIMARY KEY,
+    staff_name VARCHAR(30),
+    address VARCHAR(70),
+    job VARCHAR(40),
+    staff_salary INT,
+    FOREIGN KEY (staff_id) REFERENCES company(id)
+);
+
+INSERT INTO staff VALUES 
+					(1,'Mohan','Patna',10000,53),
+					(2,'Sohan','Delhi',300000,23),
+					(3,'Rohan','Kolkata',24000,63),
+					(4,'Jhon','Up',400,43),
+					(5,'Sameera','Kerla',3000,13);
+
+DROP TABLE staff;
+SELECT * FROM staff;
+
+CREATE TABLE project(
+	clientId INT PRIMARY KEY,
+    clientName VARCHAR(80),
+    project VARCHAR(90),
+    FOREIGN KEY (clientId) REFERENCES company(id)
+);
+
+INSERT INTO project VALUES 
+					(1,'A','C++'),
+					(2,'B','DSA'),
+					(3,'F','WEB');
+					-- (4,'R','PYTHON'),
+					-- (5,'S','C'), 
+                    -- (6,'T','Js');
+                    
+INSERT INTO project VALUES(6,'T','Js');
+DROP TABLE project;
+SELECT *FROM project;
+
+-- Joins -> It will give sum of column of both table 
+SELECT * FROM company as co
+INNER JOIN project as p ON co.id=P.clientId;
+
+-- Inner Join 
+-- Q. Enlist all the employee ID's name along with Project allocated to them
+SELECT co.id,co.name,co.salary,p.clientId,p.project from company as co
+INNER JOIN project as p ON co.id=p.clientId;
+
+-- Q. Fetch out all the employee ID's & their contact detail who have
+-- been working in Delhi with client having project DSA  
+SELECT s.staff_id , s.staff_name , s.staff_salary , p.clientName , p.project from staff as s 
+INNER JOIN project as p on s.staff_id=p.clientId WHERE project ='DSA' AND s.address='Delhi';
+
+-- Q. Can we get data same as INNER JOIN without using keyword inner join 
+SELECT co.id,co.name,co.salary,p.clientId,p.project from company as co,
+project as p WHERE co.id=p.clientId;
+
+-- left join
+-- Q. Fetch out each project allocated to each employee .
+SELECT * FROM staff as s
+LEFT JOIN project as p ON s.staff_id = p.clientId;
+
+
+-- right join
+-- Q. List out all the project along with staff name and their location 
+SELECT p.clientId , p.clientName ,s.staff_name FROM staff as s
+RIGHT JOIN project as p ON s.staff_id = p.clientId;
+
+
+-- Client name -> to get the maximum combination 
+-- Q. List out all combination possible for employee's name & project that can exist 
+SELECT s.staff_name,p.clientId,p.clientName from staff AS s
+CROSS JOIN project AS p;
+```
+
+
+
 **Set**
 ```
        SET OPERATIONS
