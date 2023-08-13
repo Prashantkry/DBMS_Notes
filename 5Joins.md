@@ -77,16 +77,18 @@ JOINING TABLES
         1. SELECT * FROM table1, table2 WHERE condition;
         2. e.g., SELECT artist_name, album_name, year_recordedFROM artist, albumWHERE artist.id = album.artist_id;
 
-   SET OPERATIONS
-        1. Used to combine multiple select statements.
-        2. Always gives distinct rows.
-
 ```
 
 <img width="497" alt="joints" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/7d88d559-a25d-4ae3-a2d6-72e5601fcacf">
 
 
+**Set**
 ```
+       SET OPERATIONS
+        1. Used to combine multiple select statements.
+        2. Always gives distinct rows.
+
+
         3. UNION
             1. Combines two or more SELECT statements.
             2. SELECT * FROM table1
