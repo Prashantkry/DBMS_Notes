@@ -303,6 +303,7 @@ SUB QUERIES
 	1. SELECT columnLists(s) FROM (SELECT columnLists(s) FROM table_name WHERE [condition]) as new_table_name;
 
     10. Co-related sub-queries
+		inner query that refers the outer query 
 	1. With a normal nested subquery, the inner SELECT query
 	    runs first and executes once, returning values to be used by
 	    the main query. A correlated subquery, however, executes
