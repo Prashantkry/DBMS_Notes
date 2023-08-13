@@ -83,7 +83,7 @@ JOINING TABLES
 
 
 
-All Code till now
+All Code of JOINS
 ```
 -- Joins 
 CREATE DATABASE joinsConcept;
