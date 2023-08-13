@@ -1,4 +1,4 @@
-Joints
+Joins
 ```
 JOINING TABLES
 1. All RDBMS are relational in nature, we refer to other tables to get meaningful outcomes.
