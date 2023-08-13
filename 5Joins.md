@@ -99,7 +99,7 @@ CREATE TABLE company(
 );
 
 INSERT INTO company VALUES
-						(1,'Sam',20000,23,7991132070),
+			(1,'Sam',20000,23,7991132070),
                         (2,'Ram',400000,43,7991132071),
                         (3,'Mohan',34000,53,7991132072),
                         (4,'Dam',2000,13,7991132073),
@@ -118,11 +118,11 @@ CREATE TABLE staff(
 );
 
 INSERT INTO staff VALUES 
-					(1,'Mohan','Patna',10000,53),
-					(2,'Sohan','Delhi',300000,23),
-					(3,'Rohan','Kolkata',24000,63),
-					(4,'Jhon','Up',400,43),
-					(5,'Sameera','Kerla',3000,13);
+		(1,'Mohan','Patna',10000,53),
+		(2,'Sohan','Delhi',300000,23),
+		(3,'Rohan','Kolkata',24000,63),
+		(4,'Jhon','Up',400,43),
+		(5,'Sameera','Kerla',3000,13);
 
 DROP TABLE staff;
 SELECT * FROM staff;
@@ -135,12 +135,12 @@ CREATE TABLE project(
 );
 
 INSERT INTO project VALUES 
-					(1,'A','C++'),
-					(2,'B','DSA'),
-					(3,'F','WEB');
-					-- (4,'R','PYTHON'),
-					-- (5,'S','C'), 
-                    -- (6,'T','Js');
+		(1,'A','C++'),
+		(2,'B','DSA'),
+		(3,'F','WEB');
+		-- (4,'R','PYTHON'),
+		-- (5,'S','C'), 
+	    	-- (6,'T','Js');
                     
 INSERT INTO project VALUES(6,'T','Js');
 DROP TABLE project;
@@ -231,11 +231,11 @@ CREATE TABLE books(
     type VARCHAR(50)
 );
 INSERT INTO books VALUES(1,'C++','Computer'),
-						(2,'DSA','Computer'),
+			(2,'DSA','Computer'),
                         (3,'Math','Math'),
                         (4,'Human Life','kids'),
                         (5,'Calculus','Math'),
-						(6,'ABC','kids');
+			(6,'ABC','kids');
 SELECT * FROM books;
 DROP TABLE books;
 
@@ -247,6 +247,7 @@ CREATE TABLE magzine(
 INSERT INTO magzine VALUES(1,'Star Lord','Adult'),
                         (3,'Champak','Kids'),
                         (5,'Balhansh','Kids');
+
 INSERT INTO magzine VALUES(7,'Java','Computer');
 SELECT * FROM magzine;
 DROP TABLE magzine;
