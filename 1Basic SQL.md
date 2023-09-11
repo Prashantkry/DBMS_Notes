@@ -24,7 +24,7 @@ What is RDBMS? (Relational Database Management System)
 ```
 Difference between SQL and MySQL
 ```
-SQL is Structured Query language used to perform CRUD operations in R-DB, while MySQL 	  is a RDBMS used to store, manage and administrate DB (provided by itself) using SQL.
+SQL is Structured Query language used to perform CRUD operations in R-DB, while MySQL is a RDBMS used to store, manage and administrate DB (provided by itself) using SQL.
 SQL DATA TYPES (Ref: https://www.w3schools.com/sql/sql_datatypes.asp)
 	1. In SQL DB, data is stored in the form of tables.
 	2. Data can be of different types, like INT, CHAR etc.
