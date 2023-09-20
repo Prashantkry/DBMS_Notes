@@ -161,7 +161,7 @@ MANAGING DB (DDL)
 ```
 
 __Making a complete Database of an Organization__
-```ruby
+```
 create database Organization;
 USE Organization;
 create table Worker(
