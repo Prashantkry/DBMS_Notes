@@ -2,20 +2,20 @@
 > To run in CMD -> mysql -u root -p
 
 SQL
-```
+```ruby
  Structured Query Language, used to access and manipulate data.
  SQL used CRUD operations to communicate with DB.
  SQL is not DB, is a query language.
 ```
 Few Commands 
-```
+```ruby
 1. CREATE - execute INSERT statements to insert new tuple into the relation.
 2. READ - Read data already in the relations.
 3. UPDATE - Modify already inserted data in the relation.
 4. DELETE - Delete specific data point/tuple/row or multiple rows.
 ```
 What is RDBMS? (Relational Database Management System)
-```
+```ruby
 1. Software that enable us to implement designed relational model.
 2. e.g., MySQL, MS SQL, Oracle, IBM etc.
 3. Table/Relation is the simplest form of data storage object in R-DB.
@@ -23,14 +23,14 @@ What is RDBMS? (Relational Database Management System)
 5. MySQL used client-server model, where client is CLI or frontend that used services provided by MySQL server.
 ```
 Difference between SQL and MySQL
-```
+```ruby
 SQL is Structured Query language used to perform CRUD operations in R-DB, while MySQL is a RDBMS used to store, manage and administrate DB (provided by itself) using SQL.
 SQL DATA TYPES (Ref: https://www.w3schools.com/sql/sql_datatypes.asp)
 	1. In SQL DB, data is stored in the form of tables.
 	2. Data can be of different types, like INT, CHAR etc.
 ```
 DATATYPE Description
-```
+```ruby
 CHAR 		string(0-255), string with size = (0, 255], e.g., CHAR(251)
 			It occupy complete space 255 byte even blank space will be occupied
 			 _______________________________________
@@ -72,7 +72,7 @@ BIT 		e.g., BIT(n), n upto 64, store values in bits.
 ```
 
 Signed / UnSigned
-```
+```ruby
 Ex- 
 	by default Its signed but when we unsigned it we can increase its size
 	TINYINT 	integer(-128 to 127)
@@ -87,17 +87,17 @@ Ex-
 ```
 
 Create Table 
-```
+```ruby
 create database College;
 ```
 
 Select Database Name 
-```
+```ruby
 USE college;
 ```
 
 Create Table
-```
+```ruby
 CREATE table Student(
 	**keyword should be in capital  letter**
 	id INT PRIMARY KEY,	  
@@ -107,26 +107,26 @@ CREATE table Student(
 
 Inserting data in table 
 > addding data in table is called entity  or tuple 
-```
+```ruby
 INSERT INTO Student VALUES(1,'Prasahnt');
 INSERT INTO Worker VALUES(5,"Sweety","",20000,'28-08-23 09.00.00','Front-End Developer');
 INSERT INTO Worker VALUES(6,"Rahul","Kr",20000,null,'Front-End Developer');
 ```
 
 Deleting data in table 
-```
+```ruby
 DROP database IF EXISTS Data_base_name;
 	-- deleting table 
 	DROP TABLE student;
 ```
 
 show data available in table 
-```
+```ruby
 SELECT * FROM Data_base_name;
 ```
 
 Few Important command of DBMS SQL
-```
+```ruby
 1. DDL (data definition language): defining relation schema.
 	1. CREATE: create table, DB, view.
 	2. ALTER TABLE: modification in table structure. e.g, change column datatype or add/remove columns.
@@ -150,7 +150,7 @@ Few Important command of DBMS SQL
 	4. SAVEPOINT: checkout within the group of transactions in which to rollback.
  ```
 MANAGING DB (DDL)
-```
+```ruby
 1. Creation of DB
 	1. CREATE DATABASE IF NOT EXISTS db-name;
 		IF NOT EXISTS -> agar ni h tasb hi banana h DataBase ko
@@ -161,7 +161,7 @@ MANAGING DB (DDL)
 ```
 
 __Making a complete Database of an Organization__
-```
+```ruby
 create database Organization;
 USE Organization;
 create table Worker(
@@ -222,18 +222,18 @@ DROP database IF EXISTS Orgainzations;
 ```
 
 To know single particular field data  
-```
+```ruby
 Select First_Name from worker;
 ```
 
 To know multiple particular field data  
-```
+```ruby
 Select First_Name ,Salary from worker;
 ```
 
 __DATA RETRIEVAL LANGUAGE (DRL)__
 
-```
+```ruby
 1. Syntax: SELECT <set of column names> FROM <table_name>;
 2. Order of execution from RIGHT to LEFT.
 3. Q. Can we use SELECT keyword without using FROM clause?
