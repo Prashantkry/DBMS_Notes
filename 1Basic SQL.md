@@ -113,7 +113,7 @@ INSERT INTO Worker VALUES(5,"Sweety","",20000,'28-08-23 09.00.00','Front-End Dev
 INSERT INTO Worker VALUES(6,"Rahul","Kr",20000,null,'Front-End Developer');
 ```
 
-Deleting data in table 
+Deleting data in database 
 ```ruby
 DROP database IF EXISTS Data_base_name;
 	-- deleting table 
