@@ -92,6 +92,9 @@ Ex-
 	);
 ```
 
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/953f75cf-10f3-4020-b471-be3448856ae1)
+
+
 Create Table 
 ```ruby
 create database College;
