@@ -40,8 +40,8 @@ DATATYPE Description
 CHAR 		string(0-255), string with size = (0, 255], e.g., CHAR(251)
 			It occupy complete space 255 byte even blank space will be occupied
 			 _______________________________________
-			|	|	|	|	|	|
-			|   R	|   A	|   M	|	|	|
+			|	|	|	|	|	|	|		|		|
+			|   R	|   A	|   M	|		|		|
 			|_______|_______|_______|_______|_______|
 
 VARCHAR 	string(0-255)
