@@ -1,6 +1,12 @@
 # DMS_Notes
 > To run in CMD -> mysql -u root -p
 
+```
+Database is a collections of data in a format that can be easily accessed 
+A software applications that is used to manage DB is called DBMS
+		User -> (SQL) -> DBMS   ->  DB
+```
+
 SQL
 ```ruby
  Structured Query Language, used to access and manipulate data.
