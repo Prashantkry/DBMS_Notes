@@ -94,6 +94,8 @@ Ex-
 
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/953f75cf-10f3-4020-b471-be3448856ae1)
 
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/d6c98d38-8352-4ea5-870c-614d87e3a6c0)
+
 
 Create Table 
 ```ruby
