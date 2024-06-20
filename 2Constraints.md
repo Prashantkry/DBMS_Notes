@@ -15,7 +15,8 @@ Primary Key
 		L_Name CHAR(20),
 		DOB    DATE,
 		Gender  char(10)
-	    --	PRIMARY KEY(id)		// way 2nd to set 
+	    --	PRIMARY KEY(id)		// way 2nd to set
+     	    --	PRIMARY KEY(id,F_Name)	// way 3rd here id,name can be seperately be duplicate but combinations of both can't be duplicate.
 	);
 
 Foreign Key
