@@ -96,6 +96,9 @@ Pimary key -> makes a column unique & not null but can be used for one.
 
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/b6817425-84d7-4c5e-9980-e0d6a8bd04d9)
 
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/9e3b6209-41dc-41af-ade0-d92c137c6534)
+
+
 
 All code till now 
 ```
