@@ -368,6 +368,20 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 	-- group by having 
 	select department, COUNT(department) FROM Worker group by department HAVING COUNT(department)>2;
 ```
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/7b442e8c-7d01-4275-b8fd-f727809f5b27)
+
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/6cb4b4e5-69aa-4278-89a9-26dd1e30c0e8)
+
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/bf2e1524-f971-4dd7-8bd7-2f92964c9026)
+
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/5b4bc318-9ab1-402f-a773-76cab4b6ab27)
+
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/d184872c-4aca-444f-b61e-1506034a1455)
+
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/644cfaa2-c7dc-406d-831a-626e94e689cb)
+
+
+
 
 All Code Till Now 
 ```
