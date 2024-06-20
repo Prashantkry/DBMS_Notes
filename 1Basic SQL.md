@@ -392,6 +392,13 @@ select count(marks) from student;
 ```
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/e4ee1da8-5c19-40cb-bbe4-cae82e0309f5)
 
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/a98e1119-e8c2-4037-92cd-c3e7b76ff085)
+
+```
+Where is used in rows and having for group by
+```
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/35e188ee-31bb-4b03-8bb3-79cd35b278d5)
+
 
 
 All Code Till Now 
