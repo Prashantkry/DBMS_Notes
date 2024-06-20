@@ -380,6 +380,17 @@ __DATA RETRIEVAL LANGUAGE (DRL)__
 
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/644cfaa2-c7dc-406d-831a-626e94e689cb)
 
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/61c3e0d2-03e7-4bd8-8622-ed91db21bce6)
+```
+-- Aggregate functions
+-- It perform calculations on set of value & return single values
+select max(marks) from student;
+select min(marks) from student;
+select avg(marks) from student;
+select sum(marks) from student;
+select count(marks) from student;
+```
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/e4ee1da8-5c19-40cb-bbe4-cae82e0309f5)
 
 
 
