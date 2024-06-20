@@ -128,6 +128,10 @@ DATA MANIPULATION LANGUAGE (DML)
         5. REPLACE INTO table SET col1 = val1, col2 = val2;
 
 ```
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/de54f2fb-aa5c-4ec9-9146-850d477e5be7)
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/af9400ea-5369-4ced-a0ba-0cb1b2c999a2)
+
+
 
 All Code Till Now 
 ```
