@@ -116,6 +116,9 @@ CREATE table Student(
 );
 ```
 
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/c7382cbf-9c8a-4a0f-8800-cb60ac86b360)
+
+
 Inserting data in table 
 > addding data in table is called entity  or tuple 
 ```ruby
