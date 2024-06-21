@@ -60,6 +60,9 @@ ALTER TABLE teacher CHANGE COLUMN salary salary_teacher INT;
 ALTER TABLE teacher DROP salary_teacher;
 ```
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/ec947420-736a-43f2-b930-4fcb9b6275bd)
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/7d731a96-8511-4d63-b7ab-f36073855d38)
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/83598b97-69d7-4e56-b1f2-0afe92e134f7)
+
 
 
 
