@@ -59,6 +59,9 @@ ALTER TABLE teacher CHANGE COLUMN salary salary_teacher INT;
 -- DROP COLUMN 
 ALTER TABLE teacher DROP salary_teacher;
 ```
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/ec947420-736a-43f2-b930-4fcb9b6275bd)
+
+
 
 DATA MANIPULATION LANGUAGE (DML)
 ```
