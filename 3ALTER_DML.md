@@ -132,7 +132,7 @@ DATA MANIPULATION LANGUAGE (DML)
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/af9400ea-5369-4ced-a0ba-0cb1b2c999a2)
 
 > Cascading means changes in 1 place must modify at other.
-![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/7a60e4ef-3315-446f-8473-07e4aac54b0d)
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/4d27d585-5e94-482d-a23d-9868fc76bc80)
 
 
 
