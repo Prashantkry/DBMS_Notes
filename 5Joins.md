@@ -82,6 +82,10 @@ JOINING TABLES
         3. Emulated using INNER JOIN.
         4. SELECT columns FROM table as t1 INNER JOIN table as t2 ON t1.id = t2.id;
 ```
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/5e3e62b5-9077-4005-a8d1-d3e257078e04)
+>Example
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/d27e20e5-17c2-4398-8792-94effddc7118)
+
 
 
 7. Join without using join keywords.
