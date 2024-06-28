@@ -27,6 +27,7 @@ JOINING TABLES
         4. SELECT col_name1, col_name2,... FROM table_name AS alias_name;
 ```
 <img width="271" alt="image" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/c16bf89b-9791-455d-b5e5-6ad02a85a7dd">
+
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/a6c6218e-e63c-49ab-ac4b-7b7ed03aaf9f)
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/3aa12eed-74dc-438c-a38b-e6242710ce52)
 ![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/113b7cc7-d072-40d9-8f43-77028cfbc458)
