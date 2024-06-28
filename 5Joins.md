@@ -1,4 +1,6 @@
 Joins
+> Joins is used to combine rows from 2 or more tables based on a related column b/w them.
+> For making joins it is not compulsory to have Foreign Key.
 ```
 JOINING TABLES
 1. All RDBMS are relational in nature, we refer to other tables to get meaningful outcomes.
