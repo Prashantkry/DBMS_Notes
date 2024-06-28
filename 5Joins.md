@@ -1,6 +1,9 @@
 Joins
 > Joins is used to combine rows from 2 or more tables based on a related column b/w them.
 > For making joins it is not compulsory to have Foreign Key.
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/bfa50e94-0830-4eca-a56a-1ddd1c26036b)
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/0a39f693-a27e-4261-bdf3-4ab869109146)
+
 ```
 JOINING TABLES
 1. All RDBMS are relational in nature, we refer to other tables to get meaningful outcomes.
@@ -24,6 +27,12 @@ JOINING TABLES
         4. SELECT col_name1, col_name2,... FROM table_name AS alias_name;
 ```
 <img width="271" alt="image" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/c16bf89b-9791-455d-b5e5-6ad02a85a7dd">
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/a6c6218e-e63c-49ab-ac4b-7b7ed03aaf9f)
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/3aa12eed-74dc-438c-a38b-e6242710ce52)
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/113b7cc7-d072-40d9-8f43-77028cfbc458)
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/d6f75bb3-f13b-46a5-9e5d-225497b6e5d1)
+
+
 
   
 4. OUTER JOIN
