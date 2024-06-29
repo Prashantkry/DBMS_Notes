@@ -234,6 +234,7 @@ CROSS JOIN project AS p;
             4. e.g., SELECT id FROM table-1 LEFT JOIN table-2 USING(id) WHERE table-2.id IS NULL;
 
 ```
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/227ded50-1c57-4df5-9e71-d4bdbcaad978)
 
 
 All Code of Set Operations
@@ -294,6 +295,7 @@ SELECT magzine .* FROM magzine LEFT JOIN books using (id)
 WHERE books.id is NULL;
 ```
 
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/c3e639e7-49ae-4cbd-94ef-3d1169dabb03)
 
 SUB QUERIES
 ```
@@ -336,6 +338,7 @@ SUB QUERIES
 
 <img width="515" alt="image" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/f65f1110-3c05-42bf-9591-4b8477c5b801">
 
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/d0accc37-4aae-41b1-81a8-f1f0a353e13d)
 
 
 All code of SUB QUERIES
