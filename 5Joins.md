@@ -338,9 +338,6 @@ SUB QUERIES
 
 <img width="515" alt="image" src="https://github.com/Prashantkry/DMS_Notes/assets/71703153/f65f1110-3c05-42bf-9591-4b8477c5b801">
 
-![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/d0accc37-4aae-41b1-81a8-f1f0a353e13d)
-
-
 All code of SUB QUERIES
 ```
 -- Sub Queries -> queries under quries 
@@ -426,3 +423,10 @@ DROP VIEW IF EXISTS custom_view;
 
 
 ```
+```
+-- Mysql views is a virtual table 
+create view v1 AS select rollNo,name,marks from student;
+drop view v1;
+select * from v1;
+```
+![image](https://github.com/Prashantkry/DBMS_Notes/assets/71703153/d0accc37-4aae-41b1-81a8-f1f0a353e13d)
